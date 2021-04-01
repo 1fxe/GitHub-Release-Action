@@ -11,7 +11,7 @@ const releaseFile = core.getInput('release_file');
 
 const file = fs.readFileSync(releaseFile);
 const stat = fs.statSync(releaseFile);
-const fileName = path.basename(file);
+const fileName = path.basename(releaseFile);
 
 const repo = github.context.repo;
 const octokit = github.getOctokit(releaseToken);
