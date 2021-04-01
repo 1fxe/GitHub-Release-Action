@@ -2,6 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const mime = require('mime');
 const fs = require('fs');
+const path = require('path');
 
 const releaseToken = core.getInput('release_token');
 const releaseTag = core.getInput('release_tag');
@@ -10,6 +11,7 @@ const releaseFile = core.getInput('release_file');
 
 const file = fs.readFileSync(releaseFile);
 const stat = fs.statSync(releaseFile);
+const fileName = path.basename(file);
 
 const repo = github.context.repo;
 const octokit = github.getOctokit(releaseToken);
@@ -30,7 +32,7 @@ const run = async () => {
     .uploadReleaseAsset({
       owner: repo.owner,
       repo: repo.repo,
-      name: releaseFile,
+      name: fileName,
       release_id: releaseId,
       data: file,
       headers: {
