@@ -1,0 +1,18 @@
+name: 'GitHub Release Action'
+description: 'Releases your artifacts on GitHub'
+inputs:
+  release_token: 
+    description: 'Release token'
+    required: true
+  release_tag:
+    description: 'Release tag'
+    required: true
+  release_title: 
+    description: 'Title of this release'
+    required: true
+  release_file:
+    description: 'The release artifact'
+    required: true
+runs:
+  using: 'node12'
+  main: 'index.js'

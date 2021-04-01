@@ -1,0 +1,25 @@
+{
+  "name": "github-release-action",
+  "version": "1.0.0",
+  "description": "Publish GitHub releases with this action",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1fxe/GitHub-Release-Action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1fxe/GitHub-Release-Action/issues"
+  },
+  "homepage": "https://github.com/1fxe/GitHub-Release-Action#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "mime": "^2.5.2"
+  }
+}
