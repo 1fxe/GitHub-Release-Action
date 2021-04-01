@@ -1,5 +1,9 @@
 name: 'GitHub Release Action'
 description: 'Releases your artifacts on GitHub'
+author: '1fxe'
+branding:
+  icon: 'git-branch'
+  color: 'gray-dark'
 inputs:
   release_token: 
     description: 'Release token'
